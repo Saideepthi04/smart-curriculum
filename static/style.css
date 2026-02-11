@@ -1,0 +1,150 @@
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffe4ec; /* Light Pink */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Layout ===== */
+.container {
+  width: 92%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.header h1 {
+  margin: 0 0 6px 0;
+  color: #c2185b;
+  font-size: 34px;
+}
+
+.subtitle {
+  margin: 0;
+  color: #6d4c41;
+  font-size: 15px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  margin-top: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin: 0 0 14px 0;
+  color: #ad1457;
+}
+
+/* ===== Form ===== */
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+input, select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid #e3c2cc;
+  outline: none;
+  font-size: 15px;
+  background: #fff9fb;
+  transition: 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: #ec407a;
+  box-shadow: 0 0 0 4px rgba(236, 64, 122, 0.15);
+}
+
+/* ===== Button ===== */
+.btn {
+  margin-top: 6px;
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(90deg, #ec407a, #c2185b);
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0px);
+}
+
+/* ===== Status + Result ===== */
+.status {
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ad1457;
+}
+
+.result {
+  margin-top: 18px;
+}
+
+/* ===== Output Cards ===== */
+.semester {
+  background: #fff0f5;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #f2c6d5;
+}
+
+.semester h3 {
+  margin: 0 0 10px 0;
+  color: #880e4f;
+}
+
+.course {
+  background: #f8bbd0;
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 12px;
+  border: 1px solid #f0a9c2;
+}
+
+.course h4 {
+  margin: 0 0 6px 0;
+  color: #6a1b9a;
+}
+
+.topics {
+  margin-top: 8px;
+  color: #4a148c;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+@media (max-width: 520px) {
+  .header h1 { font-size: 28px; }
+  .card { padding: 18px; }
+}

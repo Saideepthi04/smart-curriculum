@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenAI Curriculum Generator</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+
+    <header class="header">
+      <h1>GenAI Curriculum Generator</h1>
+      <p class="subtitle">Generate a semester-wise curriculum using AI</p>
+    </header>
+
+    <section class="card">
+      <h2>Create Curriculum</h2>
+
+      <form id="curriculumForm" class="form">
+
+        <div class="field">
+          <label for="skill">Skill</label>
+          <input id="skill" type="text" placeholder="Machine Learning" required />
+        </div>
+
+        <div class="field">
+          <label for="level">Education Level</label>
+          <select id="level" required>
+            <option value="">Select</option>
+            <option>Diploma</option>
+            <option>BTech</option>
+            <option>Masters</option>
+            <option>Certification</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="semesters">Number of Semesters</label>
+          <input id="semesters" type="number" min="1" max="8" placeholder="4" required />
+        </div>
+
+        <div class="field">
+          <label for="weekly_hours">Weekly Hours</label>
+          <input id="weekly_hours" type="text" placeholder="20-25" required />
+        </div>
+
+        <div class="field">
+          <label for="industry_focus">Industry Focus</label>
+          <input id="industry_focus" type="text" placeholder="AI" required />
+        </div>
+
+        <button class="btn" type="submit">Generate Curriculum</button>
+      </form>
+    </section>
+
+    <div id="status" class="status">Ready to generate curriculum...</div>
+
+    <section id="result" class="result"></section>
+
+  </div>
+
+  <!-- Link JS -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
