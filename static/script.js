@@ -43,10 +43,34 @@ if (form) {
 }
 
 function renderCurriculum(data) {
+  const internshipsHtml = (data.internships || [])
+    .map(x => `<li>${escapeHtml(x)}</li>`)
+    .join("");
+
+  const certificationsHtml = (data.certifications || [])
+    .map(x => `<li>${escapeHtml(x)}</li>`)
+    .join("");
+
   resultBox.innerHTML = `
     <div class="glass-card">
       <h2 class="result-title">${escapeHtml(data.program_title)}</h2>
       <p class="result-summary">${escapeHtml(data.summary)}</p>
+    </div>
+
+    <div class="grid-2" style="margin-top:14px;">
+      <div class="glass-card">
+        <h3>Suggested Internship Roles</h3>
+        <ul class="checklist">
+          ${internshipsHtml || "<li>No suggestions available</li>"}
+        </ul>
+      </div>
+
+      <div class="glass-card">
+        <h3>Recommended Certifications</h3>
+        <ul class="checklist">
+          ${certificationsHtml || "<li>No suggestions available</li>"}
+        </ul>
+      </div>
     </div>
   `;
 
