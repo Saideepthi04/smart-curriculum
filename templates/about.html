@@ -1,1 +1,78 @@
-<h1>This is About Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CurrHub | About</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="bg-orbs"></div>
+
+  <div class="container">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        <span>CurrHub</span>
+      </div>
+
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <a href="/generator">Generator</a>
+        <a class="active" href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="page-title">
+      <h1>About CurrHub</h1>
+      <p>Why this project matters and what problem it solves.</p>
+    </section>
+
+    <section class="glass-card">
+      <h2>The Problem</h2>
+      <p class="muted">
+        Many students know what they want to learn, but they don’t know how to structure it into
+        a semester-wise academic plan. Online resources are scattered, and mentors cannot manually
+        create personalized curriculums for everyone.
+      </p>
+
+      <h2>Our Solution</h2>
+      <p class="muted">
+        CurrHub takes inputs like skill, education level, semesters, weekly hours, and industry focus,
+        then generates a structured curriculum with courses, credits, and topic lists.
+      </p>
+
+      <h2>Why it’s Hackathon-Ready</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Verified</h3>
+          <p>Public GitHub repository for heads/mentors to verify code.</p>
+        </div>
+        <div class="feature">
+          <h3>Modular</h3>
+          <p>Frontend, backend, and AI can be upgraded independently.</p>
+        </div>
+        <div class="feature">
+          <h3>Expandable</h3>
+          <p>Can add PDF export, login, saved plans, and real AI APIs.</p>
+        </div>
+      </div>
+
+      <h2>Tech Stack</h2>
+      <div class="tags">
+        <span class="tag">Flask</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">GitHub</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 CurrHub • About</p>
+    </footer>
+  </div>
+</body>
+</html>

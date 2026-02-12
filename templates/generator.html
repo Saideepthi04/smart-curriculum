@@ -1,1 +1,99 @@
-<h1>This is Generator Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CurrHub | Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <div class="bg-orbs"></div>
+
+  <div class="container">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        <span>CurrHub</span>
+      </div>
+
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <a class="active" href="/generator">Generator</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="page-title">
+      <h1>Curriculum Generator</h1>
+      <p>Fill the form and generate a semester-wise curriculum.</p>
+    </section>
+
+    <section class="grid-2">
+      <div class="glass-card">
+        <h2>Create Curriculum</h2>
+
+        <form id="curriculumForm" class="form">
+          <div class="field">
+            <label for="skill">Skill</label>
+            <input id="skill" type="text" placeholder="Machine Learning" required />
+          </div>
+
+          <div class="field">
+            <label for="level">Education Level</label>
+            <select id="level" required>
+              <option value="">Select</option>
+              <option>Diploma</option>
+              <option>BTech</option>
+              <option>Masters</option>
+              <option>Certification</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="semesters">Number of Semesters</label>
+            <input id="semesters" type="number" min="1" max="8" placeholder="4" required />
+          </div>
+
+          <div class="field">
+            <label for="weekly_hours">Weekly Hours</label>
+            <input id="weekly_hours" type="text" placeholder="20-25" required />
+          </div>
+
+          <div class="field">
+            <label for="industry_focus">Industry Focus</label>
+            <input id="industry_focus" type="text" placeholder="AI" required />
+          </div>
+
+          <button class="btn primary" type="submit">Generate Curriculum</button>
+        </form>
+
+        <div id="status" class="status">Ready.</div>
+      </div>
+
+      <div class="glass-card">
+        <h2>How it works</h2>
+        <p class="muted">
+          The frontend sends your inputs to the backend API. The backend generates a structured
+          curriculum (JSON). The output is displayed as semester-wise cards.
+        </p>
+
+        <div class="tips">
+          <div class="tip">✔ Structured output for evaluation</div>
+          <div class="tip">✔ Works without API keys</div>
+          <div class="tip">✔ Can be upgraded to real AI later</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="result" class="result"></section>
+
+    <footer class="footer">
+      <p>© 2026 CurrHub • Generator</p>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

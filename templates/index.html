@@ -3,67 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GenAI Curriculum Generator</title>
-
-  <!-- Link CSS -->
+  <title>CurrHub | Home</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
+  <div class="bg-orbs"></div>
+
   <div class="container">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        <span>CurrHub</span>
+      </div>
 
-    <header class="header">
-      <h1>GenAI Curriculum Generator</h1>
-      <p class="subtitle">Generate a semester-wise curriculum using AI</p>
-    </header>
+      <div class="navlinks">
+        <a class="active" href="/">Home</a>
+        <a href="/generator">Generator</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
 
-    <section class="card">
-      <h2>Create Curriculum</h2>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="pill">Hackathon Project • Flask • AI-ready</div>
 
-      <form id="curriculumForm" class="form">
+        <h1>
+          Turn any skill into a
+          <span class="grad-text">semester-wise curriculum</span>
+        </h1>
 
-        <div class="field">
-          <label for="skill">Skill</label>
-          <input id="skill" type="text" placeholder="Machine Learning" required />
+        <p class="hero-sub">
+          CurrHub helps students generate a structured syllabus with courses, credits,
+          and topics — instantly. Perfect for planning learning paths and presenting to mentors.
+        </p>
+
+        <div class="hero-actions">
+          <!-- GET STARTED goes to generator -->
+          <a class="btn primary" href="/generator">Get Started</a>
+
+          <!-- LEARN MORE goes to about -->
+          <a class="btn ghost" href="/about">Learn More</a>
         </div>
 
-        <div class="field">
-          <label for="level">Education Level</label>
-          <select id="level" required>
-            <option value="">Select</option>
-            <option>Diploma</option>
-            <option>BTech</option>
-            <option>Masters</option>
-            <option>Certification</option>
-          </select>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Pages</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">1</div>
+            <div class="stat-label">API Endpoint</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Curriculums</div>
+          </div>
         </div>
+      </div>
 
-        <div class="field">
-          <label for="semesters">Number of Semesters</label>
-          <input id="semesters" type="number" min="1" max="8" placeholder="4" required />
+      <div class="hero-right">
+        <div class="glass-card">
+          <h3>What you get</h3>
+
+          <ul class="checklist">
+            <li>Semester-wise plan</li>
+            <li>Courses with credits</li>
+            <li>Topic breakdown</li>
+            <li>Industry focus included</li>
+          </ul>
+
+          <div class="mini-note">
+            Try: <b>Machine Learning</b>, <b>Masters</b>, <b>4 semesters</b>, <b>AI</b>.
+          </div>
         </div>
-
-        <div class="field">
-          <label for="weekly_hours">Weekly Hours</label>
-          <input id="weekly_hours" type="text" placeholder="20-25" required />
-        </div>
-
-        <div class="field">
-          <label for="industry_focus">Industry Focus</label>
-          <input id="industry_focus" type="text" placeholder="AI" required />
-        </div>
-
-        <button class="btn" type="submit">Generate Curriculum</button>
-      </form>
+      </div>
     </section>
 
-    <div id="status" class="status">Ready to generate curriculum...</div>
+    <section class="features">
+      <div class="feature">
+        <h3>Fast Generation</h3>
+        <p>Generate a curriculum in seconds using structured backend logic.</p>
+      </div>
 
-    <section id="result" class="result"></section>
+      <div class="feature">
+        <h3>Clean Output</h3>
+        <p>Semester cards + course cards + topics (perfect for demo).</p>
+      </div>
 
+      <div class="feature">
+        <h3>Ready for AI</h3>
+        <p>Later you can plug in any AI API (Gemini/OpenAI/Ollama).</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 CurrHub • Built for Hackathon</p>
+    </footer>
   </div>
-
-  <!-- Link JS -->
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
